@@ -78,14 +78,14 @@ public class Money {
 		return 0;
 	}
 	
-	public Money substract(Money other) {	
+	public Money subtract(Money other) {	
 		BigDecimal difference = amount.subtract(other.amount);
 		
 		return new Money(difference, currency);
 	}
 	
-	public Money multiply(Money other) {
-		BigDecimal product = amount.multiply(other.amount);
+	public Money multiply(BigDecimal value) {
+		BigDecimal product = amount.multiply(value);
 		
 		return new Money(product, currency);
 	}
